@@ -1,0 +1,23 @@
+#footer {
+    min-height: 210px;
+    max-width: 100vw;
+    background-color: #000;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo {
+        max-height: 40px;
+    }
+    .copyright {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 26px;
+        color: #FFF;
+        margin-bottom: 0px;
+        margin-top: 30px;
+    }
+}

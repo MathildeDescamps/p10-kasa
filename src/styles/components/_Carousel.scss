@@ -1,0 +1,25 @@
+ .swiper {
+    .swiper-slide {
+        min-height: 255px;
+        border-radius: 10px;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+        background-size: cover!important;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-image: url('./arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        height: 20px;
+        width: 12px;
+        margin-top: -10px;
+        &::after {
+            display: none;
+        }
+    }
+    .swiper-button-prev {
+        transform: rotate(180deg);
+    }
+}

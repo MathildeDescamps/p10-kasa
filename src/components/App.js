@@ -1,25 +1,19 @@
 import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import data from "../data";
-import Header from './Header';
-import Thumbnail from './Thumbnail';
-import banner from '../assets/banner.jpg';
-import "../styles/App.css";
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Location from '../pages/Location';
 
 function App() {
     return (
-        <React.Fragment>
-            <Header />
-            <div className='banner'>
-                <img src={banner} alt="Kasa : Chez vous, partout et ailleurs." className='banner-img' />
-                <h1>Chez vous,<br/>partout et ailleurs</h1>
-            </div>
-            {data.map((place) => {
-                return(
-                    <Thumbnail key={place.id} place={place} />
-                )
-            })}
-        </React.Fragment>
+        <>
+            <Routes>
+                <Route path='/' element={<Home locations={data} />} />
+                <Route path="/a-propos" element={<About />} />
+                <Route path='/location/:id' element={<Location locations={data} />} />
+            </Routes>
+        </>
     )
 }
-
 export default App;

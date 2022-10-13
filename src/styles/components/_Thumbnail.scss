@@ -1,0 +1,28 @@
+.thumbnail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;
+    .cover {
+        position: relative;
+        min-height: 255px;
+        max-height: 255px;
+        min-width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+        background-position: center!important;
+        background-size: cover!important;
+        background-repeat: no-repeat!important;
+        .title {
+            position: absolute;
+            bottom: 15px;
+            left: 0px;
+            padding-inline: 20px;
+            margin: 0px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            color: #FFF;
+        }
+    }
+}
