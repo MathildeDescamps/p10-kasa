@@ -1,3 +1,4 @@
+import banner from '../assets/banner.jpg';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Thumbnail from '../components/Thumbnail';
@@ -7,12 +8,14 @@ function Home(props) {
     return(
         <>
             <Header />
-            <Banner />
-            {props.locations.map((location) => {
-                return(
-                    <Thumbnail key={location.id} location={location} />
-                )
-            })}
+            <Banner image={banner} title="Chez vous,<br/>partout et ailleurs" alt="Kasa : Chez vous, partout et ailleurs.s" />
+            <div className='thumbnails-wrapper'>
+                {props.locations.map((location) => {
+                    return(
+                        <Thumbnail key={location.id} location={location} />
+                    )
+                })}
+            </div>
             <Footer /> 
         </>
     )

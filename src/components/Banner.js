@@ -1,10 +1,8 @@
-import banner from '../assets/banner.jpg';
-
-function Banner() {
+function Banner(props) {
     return(
         <div className='banner'>
-            <img src={banner} alt="Kasa : Chez vous, partout et ailleurs." className='banner-img' />
-            <h1>Chez vous,<br/>partout et ailleurs</h1>
+            <img src={props.image} alt={props.alt} className='banner-img' />
+            {props.title ? <h1>title</h1> : ""}
         </div>
     )
 }

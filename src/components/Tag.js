@@ -1,6 +1,6 @@
-function Tag(props) {
+function Tag({tag}) {
     return (
-        <span className="tag">{props.tag}</span>
+        <span className="tag">{tag}</span>
     )
 }
 

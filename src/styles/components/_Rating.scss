@@ -1,0 +1,29 @@
+.rating-host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: -5px;
+    .host {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 50%;
+        .name {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            text-align: right;
+            color: #FF6060;
+            margin-right: 10.5px;
+        }
+        .picture {
+                min-height: 32px;
+                min-width: 32px;
+                border-radius: 50%;
+                background-position: center!important;
+                background-size: cover!important;
+                background-repeat: no-repeat!important;
+        }
+    }
+}
