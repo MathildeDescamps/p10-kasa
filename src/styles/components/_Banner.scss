@@ -15,12 +15,14 @@
     }
     h1 {
         position: absolute;
-        top: 0;
+        top: calc(50% - 30px);
         left: 0;
         padding-inline: 15px;
         font-weight: 500;
         font-size: 24px;
-        color: #FFF;
+        color: #fff;
+        max-width: 220px;
+        margin: 0;
         @media screen and (min-width: 991.99999px) {
             font-size: 48px;
             left: auto;

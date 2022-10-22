@@ -26,8 +26,10 @@ function About() {
     return (
         <>
             <Header />
-            <Banner image={aboutBanner} alt="A propos de Kasa" />
-            {dropdowns.map((dropdown, index) => <Dropdown key={`dropdown-${index}`} name={dropdown.name} content={dropdown.content} />)}
+            <section className='about-page'>
+                <Banner image={aboutBanner} alt="A propos de Kasa" />
+                {dropdowns.map((dropdown, index) => <Dropdown key={`dropdown-${index}`} name={dropdown.name} content={dropdown.content} />)}
+            </section>
             <Footer />
         </>
     )

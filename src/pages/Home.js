@@ -8,7 +8,7 @@ function Home(props) {
     return(
         <>
             <Header />
-            <Banner image={banner} title="Chez vous,<br/>partout et ailleurs" alt="Kasa : Chez vous, partout et ailleurs.s" />
+            <Banner image={banner} title="Chez vous, partout et ailleurs" alt="Kasa : Chez vous, partout et ailleurs.s" />
             <div className='thumbnails-wrapper'>
                 {props.locations.map((location) => {
                     return(
