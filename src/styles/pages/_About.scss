@@ -1,3 +1,15 @@
 .about-page {
+    flex-grow: 1;
     margin-bottom: 150px;
+    .mobile-banner {
+        @media screen and (min-width: 991.9999px) {
+            display: none;
+        }
+    }
+    .desktop-banner {
+        display: none;
+        @media screen and (min-width: 991.9999px) {
+            display: block;
+        }
+    }
 }

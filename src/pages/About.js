@@ -1,4 +1,5 @@
 import aboutBanner from '../assets/about-banner.jpg';
+import aboutBannerDesktop from '../assets/about-banner-desktop.jpg';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
@@ -27,7 +28,8 @@ function About() {
         <>
             <Header />
             <section className='about-page'>
-                <Banner image={aboutBanner} alt="A propos de Kasa" />
+                <Banner class="mobile-banner" image={aboutBanner} alt="A propos de Kasa" />
+                <Banner class="desktop-banner" image={aboutBannerDesktop} alt="A propos de Kasa" />
                 {dropdowns.map((dropdown, index) => <Dropdown key={`dropdown-${index}`} name={dropdown.name} content={dropdown.content} />)}
             </section>
             <Footer />

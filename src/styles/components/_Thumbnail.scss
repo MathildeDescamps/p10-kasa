@@ -1,28 +1,65 @@
-.thumbnail {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-top: 20px;
-    .cover {
-        position: relative;
-        min-height: 255px;
-        max-height: 255px;
-        min-width: 100%;
-        max-width: 100%;
-        border-radius: 10px;
-        background-position: center!important;
-        background-size: cover!important;
-        background-repeat: no-repeat!important;
-        .title {
-            position: absolute;
-            bottom: 15px;
-            left: 0px;
-            padding-inline: 20px;
-            margin: 0px;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 26px;
-            color: #FFF;
+.flex-grow {
+    flex-grow: 1;
+    @media screen and (min-width: 991.99999px) {
+        padding-inline: 50px;
+        padding-bottom: 60px;
+        padding-top: 6px;
+        background: #f7f7f7;
+        border-radius: 25px;
+    }
+    .thumbnails-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: auto;
+        @media screen and (min-width: 991.99999px) {
+            margin-right: -30px;
+            margin-left: -30px;
+        }
+        a {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 100%;
+            @media screen and(min-width: 991.9999px) {
+                margin-top: 50px;
+                flex: 0 0 33.33333%;
+                max-width: 33.33333%;
+            }
+            .thumbnail {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                @media screen and (min-width: 991.99999px) {
+                    padding-inline: 30px;
+                }
+                .cover {
+                    position: relative;
+                    min-height: 255px;
+                    max-height: 255px;
+                    min-width: 100%;
+                    max-width: 100%;
+                    border-radius: 10px;
+                    background-position: center!important;
+                    background-size: cover!important;
+                    background-repeat: no-repeat!important;
+                    @media screen and(min-width: 991.9999px) {
+                        min-height: 340px;
+                        max-height: 340px;
+                    }
+                    .title {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 0px;
+                        padding-inline: 20px;
+                        margin: 0px;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 26px;
+                        color: #FFF;
+                    }
+                }
+            }
         }
     }
 }

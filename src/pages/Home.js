@@ -9,13 +9,15 @@ function Home(props) {
         <>
             <Header />
             <Banner image={banner} title="Chez vous, partout et ailleurs" alt="Kasa : Chez vous, partout et ailleurs.s" />
-            <div className='thumbnails-wrapper'>
-                {props.locations.map((location) => {
-                    return(
-                        <Thumbnail key={location.id} location={location} />
-                    )
-                })}
-            </div>
+            <section className='flex-grow'>
+                <div className='thumbnails-wrapper'>
+                    {props.locations.map((location) => {
+                        return(
+                            <Thumbnail key={location.id} location={location} />
+                        )
+                    })}
+                </div>
+            </section>
             <Footer /> 
         </>
     )
