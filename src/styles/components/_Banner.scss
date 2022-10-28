@@ -39,3 +39,9 @@
         }
     }
 }
+
+.about-page .banner {
+    @media screen and (min-width: 991.99999px) {
+        margin-bottom: 31px;
+    }
+}

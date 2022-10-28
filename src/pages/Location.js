@@ -22,20 +22,24 @@ function Location(props) {
             <Header />
             <section className='location-page'>
                 <Carousel pictures={currentLocation.pictures} />
-                <h1>{currentLocation.title}</h1>
-                <h2>{currentLocation.location}</h2>
-                <div className='tags'>
-                    {
-                        currentLocation.tags.map((tag, index) => <Tag key={`tag-${index}`} tag={tag} />)
-                    }
-                </div>
-                <div className='rating-host'>
-                    <div className='rating'>
-                        <Rating rating={currentLocation.rating} />
+                <div className='desktop-title-wrapper'>
+                    <div className='title'>
+                        <h1>{currentLocation.title}</h1>
+                        <h2>{currentLocation.location}</h2>
+                        <div className='tags'>
+                            {
+                                currentLocation.tags.map((tag, index) => <Tag key={`tag-${index}`} tag={tag} />)
+                            }
+                        </div>
                     </div>
-                    <div className='host'>
-                        <p className='name'>{currentLocation.host.name}</p>
-                        <div className='picture' style={{ background: `url(${currentLocation.host.picture})` }}></div>
+                    <div className='rating-host'>
+                        <div className='rating'>
+                            <Rating rating={currentLocation.rating} />
+                        </div>
+                        <div className='host'>
+                            <p className='name'>{currentLocation.host.name}</p>
+                            <div className='picture' style={{ background: `url(${currentLocation.host.picture})` }}></div>
+                        </div>
                     </div>
                 </div>
                 <Dropdown name="Description" content={currentLocation.description} />

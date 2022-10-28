@@ -4,11 +4,28 @@
     justify-content: space-between;
     margin-top: 12px;
     margin-bottom: -5px;
+    @media screen and (min-width: 991.99999px) {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        width: fit-content;
+        margin-top: 0px;
+    }
+    .rating {
+        svg {
+            @media screen and (min-width: 991.99999px){
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }   
     .host {
         display: flex;
         align-items: center;
         justify-content: flex-end;
         max-width: 50%;
+        @media screen and (min-width: 991.99999px){
+            max-width: 100%;
+        }
         .name {
             font-weight: 500;
             font-size: 12px;
@@ -16,14 +33,25 @@
             text-align: right;
             color: #FF6060;
             margin-right: 10.5px;
+            width: fit-content;
+            max-width: 93px;
+            @media screen and (min-width: 991.9999px){
+                font-size: 18px;
+                line-height: 26px;
+                margin-bottom: 24px;
+            }
         }
         .picture {
-                min-height: 32px;
-                min-width: 32px;
-                border-radius: 50%;
-                background-position: center!important;
-                background-size: cover!important;
-                background-repeat: no-repeat!important;
+            min-height: 32px;
+            min-width: 32px;
+            border-radius: 50%;
+            background-position: center!important;
+            background-size: cover!important;
+            background-repeat: no-repeat!important;
+            @media screen and (min-width: 991.9999px){
+                min-height: 64px;
+                min-width: 64px;
+            }
         }
     }
 }

@@ -12,4 +12,10 @@
             display: block;
         }
     }
+    .dropdowns-wrapper {
+        @media screen and (min-width: 991.99999px) {
+            max-width: 90%;
+            margin: auto;
+        }
+    }
 }

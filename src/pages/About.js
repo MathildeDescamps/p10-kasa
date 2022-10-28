@@ -30,7 +30,9 @@ function About() {
             <section className='about-page'>
                 <Banner class="mobile-banner" image={aboutBanner} alt="A propos de Kasa" />
                 <Banner class="desktop-banner" image={aboutBannerDesktop} alt="A propos de Kasa" />
-                {dropdowns.map((dropdown, index) => <Dropdown key={`dropdown-${index}`} name={dropdown.name} content={dropdown.content} />)}
+                <div className='dropdowns-wrapper'>
+                    {dropdowns.map((dropdown, index) => <Dropdown key={`dropdown-${index}`} name={dropdown.name} content={dropdown.content} />)}
+                </div>
             </section>
             <Footer />
         </>

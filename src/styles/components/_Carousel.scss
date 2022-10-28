@@ -5,6 +5,10 @@
         background-repeat: no-repeat!important;
         background-position: center!important;
         background-size: cover!important;
+        @media screen and (min-width: 991.99999px){
+            min-height: 415px;
+            border-radius: 25px;
+        }
     }
     .swiper-button-next,
     .swiper-button-prev {
@@ -15,11 +19,42 @@
         height: 20px;
         width: 12px;
         margin-top: -10px;
+        @media screen and (min-width: 991.99999px){
+            height: 80px;
+            width: 47px;
+            margin-top: -40px;
+        }
         &::after {
             display: none;
         }
     }
+    .swiper-button-next {
+        right: 6px;
+        @media screen and (min-width: 991.99999px){
+            right: 23px;
+        }
+    }
     .swiper-button-prev {
+        left: 6px;
         transform: rotate(180deg);
+        @media screen and (min-width: 991.99999px){
+            left: 23px;
+        }
+    }
+
+    .swiper-pagination {
+        display: none;
+        position: absolute;
+        bottom: 25px;
+        z-index: 10;
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        @media screen and (min-width: 991.99999px){
+            display: block;
+        }
     }
 }
