@@ -1,5 +1,9 @@
  .slider {
     position: relative;
+    .navigation-pagination.hidden {
+        display: none;
+        visibility: hidden;
+    }
     .slide {
         min-height: 255px;
         border-radius: 10px;

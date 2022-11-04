@@ -3,8 +3,6 @@ import logo from "../assets/logo.svg";
 
 function Header() {
     let location = useLocation();
-    console.log(location);
-
     return (
         <div id="header">
             <Link to="/">

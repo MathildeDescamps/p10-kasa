@@ -22,9 +22,11 @@ function Carousel(props) {
     return (
         <div className="slider">
             <div className="slide" style={{ backgroundImage: `url(${pictures[currentIndex]})` }}></div>
-            <span className="slider-button-prev" onClick={slideToPrevious} ></span>
-            <span className="slider-button-next" onClick={slideToNext} ></span>
-            <span className="slider-pagination">{shownSlide + ' / ' + pictures.length}</span>
+            <div className={`navigation-pagination ${pictures.length < 2 ? "hidden" : ""}`}>
+                <span className="slider-button-prev" onClick={slideToPrevious} ></span>
+                <span className="slider-button-next"  onClick={slideToNext} ></span>
+                <span className="slider-pagination">{shownSlide + ' / ' + pictures.length}</span>
+            </div>
         </div>
     )
 }
