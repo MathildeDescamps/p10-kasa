@@ -1,5 +1,6 @@
- .swiper {
-    .swiper-slide {
+ .slider {
+    position: relative;
+    .slide {
         min-height: 255px;
         border-radius: 10px;
         background-repeat: no-repeat!important;
@@ -10,31 +11,32 @@
             border-radius: 25px;
         }
     }
-    .swiper-button-next,
-    .swiper-button-prev {
+    .slider-button-next,
+    .slider-button-prev {
+        position: absolute;
+        top: calc(50% - 10px);
         background-image: url('./arrow.svg');
         background-repeat: no-repeat;
         background-size: 100% auto;
         background-position: center;
         height: 20px;
         width: 12px;
-        margin-top: -10px;
+        &:hover {
+            cursor: pointer;
+        }
         @media screen and (min-width: 991.99999px){
             height: 80px;
             width: 47px;
-            margin-top: -40px;
-        }
-        &::after {
-            display: none;
+            top: calc(50% - 40px);
         }
     }
-    .swiper-button-next {
+    .slider-button-next {
         right: 6px;
         @media screen and (min-width: 991.99999px){
             right: 23px;
         }
     }
-    .swiper-button-prev {
+    .slider-button-prev {
         left: 6px;
         transform: rotate(180deg);
         @media screen and (min-width: 991.99999px){
@@ -42,7 +44,7 @@
         }
     }
 
-    .swiper-pagination {
+    .slider-pagination {
         display: none;
         position: absolute;
         bottom: 25px;

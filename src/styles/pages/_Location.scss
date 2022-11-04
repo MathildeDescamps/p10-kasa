@@ -1,10 +1,10 @@
 .location-page {
     flex-grow: 1;
     .desktop-title-wrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
         @media screen and (min-width: 991.99999px){
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
             margin-top: 30px;
         }
     }

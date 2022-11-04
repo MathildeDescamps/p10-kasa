@@ -1,7 +1,6 @@
 function Dropdown(props) {
     let name = props.name;
     let content = props.content;
-    console.log(props);
     //Function called when user clicks on a dropdown, to show/hide content
     function toggleDropdown(e){
         e.target.classList.toggle("active");

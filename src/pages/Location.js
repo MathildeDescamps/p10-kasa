@@ -16,7 +16,6 @@ function Location(props) {
             currentLocation = location;
         }
     });
-    console.log(currentLocation);
     return (
         <>
             <Header />
