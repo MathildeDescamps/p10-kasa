@@ -23,14 +23,14 @@
             font-size: 24px;
             text-transform: none;
         }
-        &:hover {
-            text-decoration: underline;
-        }
         &:first-child {
             margin-right: 10px;
             @media screen and (min-width: 991.9999px) {
                 margin-right: 57px;
             }
+        }
+        &.active {
+            text-decoration: underline;
         }
     }
 }
