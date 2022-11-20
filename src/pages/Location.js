@@ -4,6 +4,7 @@ import Carousel from '../components/Carousel';
 import Tag from '../components/Tag';
 import Rating from '../components/Rating';
 import Dropdown from '../components/Dropdown';
+import NotFound from '../pages/NotFound';
 
 import { useParams } from 'react-router-dom';
 
@@ -16,36 +17,41 @@ function Location(props) {
             currentLocation = location;
         }
     });
-    return (
-        <>
-            <Header />
-            <section className='location-page'>
-                <Carousel pictures={currentLocation.pictures} />
-                <div className='desktop-title-wrapper'>
-                    <div className='title'>
-                        <h1>{currentLocation.title}</h1>
-                        <h2>{currentLocation.location}</h2>
-                        <div className='tags'>
-                            {
-                                currentLocation.tags.map((tag, index) => <Tag key={`tag-${index}`} tag={tag} />)
-                            }
+    if(currentLocation){
+        return (
+            <>
+                <Header />
+                <section className='location-page'>
+                    <Carousel pictures={currentLocation.pictures} />
+                    <div className='desktop-title-wrapper'>
+                        <div className='title'>
+                            <h1>{currentLocation.title}</h1>
+                            <h2>{currentLocation.location}</h2>
+                            <div className='tags'>
+                                {
+                                    currentLocation.tags.map((tag, index) => <Tag key={`tag-${index}`} tag={tag} />)
+                                }
+                            </div>
+                        </div>
+                        <div className='rating-host'>
+                            <div className='rating'>
+                                <Rating rating={currentLocation.rating} />
+                            </div>
+                            <div className='host'>
+                                <p className='name'>{currentLocation.host.name}</p>
+                                <div className='picture' style={{ background: `url(${currentLocation.host.picture})` }}></div>
+                            </div>
                         </div>
                     </div>
-                    <div className='rating-host'>
-                        <div className='rating'>
-                            <Rating rating={currentLocation.rating} />
-                        </div>
-                        <div className='host'>
-                            <p className='name'>{currentLocation.host.name}</p>
-                            <div className='picture' style={{ background: `url(${currentLocation.host.picture})` }}></div>
-                        </div>
-                    </div>
-                </div>
-                <Dropdown name="Description" content={currentLocation.description} />
-                <Dropdown name="Equipements" content={currentLocation.equipments} />
-            </section>
-            <Footer />
-        </>
-    )
+                    <Dropdown name="Description" content={currentLocation.description} />
+                    <Dropdown name="Equipements" content={currentLocation.equipments} />
+                </section>
+                <Footer />
+            </>
+        )
+    }
+    else {
+        return <NotFound />
+    }
 }
 export default Location;
